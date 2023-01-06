@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {};
-  title = 'my-app';
+  title = 'angularlab';
   parentName = '1234';
 }
