@@ -1,0 +1,21 @@
+<p>search works!</p>
+<button routerLink="/home">Home</button><br />
+
+<div class="form-control">
+    <input type="text" [(ngModel)]="searchText" (input)="search()" />
+</div>
+<div>
+    <table *ngIf="listFiltered.length>0; else noResult">
+        <thead>
+            <th>items</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listFiltered">
+                <td class="b1">{{item}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #noResult>
+        No Data
+    </ng-template>
+</div>

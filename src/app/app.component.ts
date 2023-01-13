@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationExtras, Router, ActivatedRoute, ParamMap } from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {};
-  title = 'angularlab';
-  parentName = '1234';
 }
