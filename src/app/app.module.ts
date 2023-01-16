@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { CounterComponent } from './counter/counter.component';
 import { SearchComponent } from './search/search.component';
-import { FilterComponent } from './filter/filter.component';
+import { FilterDemoComponent } from './filterDemo/filterDemo.component';
 import { PopupModelComponent } from './popup-model/popup-model.component';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { PopupModelComponent } from './popup-model/popup-model.component';
     PageNotFoundComponent,
     CounterComponent,
     SearchComponent,
-    FilterComponent,
+    FilterDemoComponent,
     PopupModelComponent,
   ],
   imports: [

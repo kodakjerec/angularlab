@@ -71,7 +71,7 @@ npm start
 
 ***
 ## 組件命名規則 ##
-![組件命名規則](readmeImg/angular_components.jpg)  
+<kbd>![組件命名規則](readmeImg/angular_components.jpg)</kbd>  
 
 * 包含 **compoments**、**modules** 。  
 * 使用**資料夾**做區隔。  
@@ -81,13 +81,13 @@ npm start
 
 ***
 ## 組件在 template 使用的名稱規則 ##
-![組件命名規則](readmeImg/template_compoment_naming.jpg)  
+<kbd>![組件命名規則](readmeImg/template_compoment_naming.jpg)</kbd>  
 * 名稱與 binding 屬性(props)一律改為 **kebab-case**。(例如：PopupModal 寫成 popup-modal，isOpen 改為 is-open。)
 > 提示：  
 > 可安裝 Visual Studio Code 的 **change-case** 擴充套件，該套件可透過指令或設定快速鍵自動將大駝峰的格式轉為kebab-case。
 ***
 ## Javascript 函式或方法註解規則 ##
-![jsdoc sample](readmeImg/jsdoc_sample.jpg)  
+<kbd>![jsdoc sample](readmeImg/jsdoc_sample.jpg)</kbd>  
 
 * 需在函式或方法增加 [JSDoc](https://docs.microsoft.com/zh-tw/visualstudio/ide/create-jsdoc-comments-for-javascript-intellisense) 註解。
 * 必需說明的項目為 **`@description`**(功能說明)、**`@param`**(參數型態、用途說明) 、**`@returns`**(回傳值型態與說明，無回傳值時不需註解)。
@@ -95,13 +95,13 @@ npm start
 > **注意：請依照上述的專案構結、命名規則與練習項目提供的畫面圖片進行開發。**  
 ### **※項目 1. 新增一個練習項目清單頁面，透過選單連結可以開啟該頁面。** ###
   **需求說明**  
-    ![practice page](readmeImg/practice_page.jpg)  
+    <kbd>![practice page](readmeImg/practice_page.jpg)</kbd>  
     1. 建立一個 Practice 頁面，預設畫面上的清單要有一個"Home"的連結可連到首頁，後續練習項目如有新增路由與頁面再增加到"練習項目清單"。  
     2. 路由名稱為"practice"，網址路徑為"/practice"。  
     3. 在選單上增加"Practice"連結，點擊後連結至剛剛新建之頁面。  
 
 ### **※項目 2. 建立一個計數器頁面，可透過 Practice 頁面上練習項目清單的 Counter 連結開啟該頁。** ###
-  ![counter](readmeImg/counter_page.jpg)  
+  <kbd>![counter](readmeImg/counter_page.jpg)</kbd>  
   **需求說明**  
     1. 建立一個 Counter 頁面。  
     2. 每次進入頁面時，計數都**從 0 開始**。  
@@ -111,8 +111,7 @@ npm start
     6. 在 Practice 頁面上的練習項目清單，加上 Counter 連結，連結文字為"Counter"，點擊後會轉至 Counter 頁面。  
 
 ### **※項目 3. 建立一個清單搜尋頁面，會依照輸入的關鍵字(不分大小寫)即時過濾畫面顯示的清單，並顯示目前清單筆數，可透過 Practice 頁面上練習項目清單的 Search 連結開啟該頁。** ###
-  ![search default](readmeImg/search_default.jpg)  
-  ![search with keyword](readmeImg/search_keyword.jpg)  
+  <kbd>![search default](readmeImg/search_default.jpg)|![search with keyword](readmeImg/search_keyword.jpg)</kbd>  
   **需求說明**  
     1. 建立一個 Search 頁面。  
     2. 預設清單資料為一個字串陣列有12筆資料，資料如下  
@@ -123,7 +122,7 @@ npm start
     6. 在 Practice 頁面上的練習項目清單，加上 Search 連結，連結文字為"Search"，點擊後會轉至 Search 頁面。  
 
 ### **※項目 4. 建立一個能把數字轉為有千分位的字串且保留小數位數的 filter，並在頁面展示 filter 的功能。** ###
-  ![filter demo](readmeImg/filter_demo.jpg)  
+  <kbd>![filter demo](readmeImg/filter_demo.jpg)</kbd>  
   **需求說明**  
     1. 新建一個 filter 功能，參照目前專案的構結檔案應放置在 /src/utils/filters 下，filter 名稱為"**commafy**"，作法可參考 filters 內的 demo.js。  
     2. 此 filter **可將數字轉為有千分位的字串且保留小數位數**，例如將 10000.00 轉為 10,000.00、1000 轉為 1,000。  
@@ -133,8 +132,8 @@ npm start
     6. 在 Practice 頁面上的練習項目清單，加上 FilterDemo 連結，連結文字為"Filter Demo"，點擊後會轉至 FilterDemo 頁面。  
 
 ### **※項目 5. 建立一個 List component，可傳入字串陣列資料，點擊項目時會觸發一個自訂事件 clickitem 傳入該項目的資料內容與 index。並且在頁面展示組件的功能。** ###
-  ![list compoment](readmeImg/list_demo.jpg)  
-  ![list compoment item click](readmeImg/list_demo_click.jpg)  
+  <kbd>![list compoment](readmeImg/list_demo.jpg)  
+  ![list compoment item click](readmeImg/list_demo_click.jpg)</kbd>  
   **需求說明**  
     1. 建立一個組件名稱為 **List**。  
     2. 組件必須要有 **data 屬性** **只能傳入字串陣列資料**，如果**沒有資料此組件會自動不顯示**。  
@@ -144,15 +143,15 @@ npm start
     6. 在 Practice 頁面上的練習項目清單，加上 ListDemo 連結，連結文字為"List Demo"，點擊後會轉至 ListDemo 頁面。  
 
 ### **※項目 6. 把頁面上的選單改寫為 component，原有的樣式、功能都要與原本相同。** ###
-  ![menu compoment](readmeImg/menu_component.jpg)  
+  <kbd>![menu compoment](readmeImg/menu_component.jpg)</kbd>  
   **需求說明**  
     1. 組件名稱為 **Menu**。  
     2. 組件必須要有 **items 屬性**，傳入所有連結項目的資料。  
     3. 將目前畫面上的選單替換成此組件，替換後頁面呈現要與原本頁面相同。  
 
 ### **※項目 7. 建立一個 popup modal component。** ###
-  ![popup modal compoment](readmeImg/popup_modal.jpg)  
-  ![popup modal compoment demo](readmeImg/popup_modal_demo.jpg)  
+  <kbd>![popup modal compoment](readmeImg/popup_modal.jpg)  
+  ![popup modal compoment demo](readmeImg/popup_modal_demo.jpg)</kbd>  
   **需求說明**  
     1. 建立一個組件名稱為 **PopupModal**。  
     2. 組件必須要有 **title、isOpen 屬性**，title 用來提供標題文字。isOpen 用來控制 modal 的開關。  
@@ -162,7 +161,7 @@ npm start
     6. 在 Practice 頁面上的練習項目清單，加上 ModalDemo 連結，連結文字為"Modal Demo"，點擊後會轉至 ModalDemo 頁面。  
 
 ### **※項目 8. 新增一個使用者註冊頁面，表單需做欄位檢核，並且有送出與清除功能。** ###
-  ![menu compoment](readmeImg/register_page.jpg)  
+  <kbd>![menu compoment](readmeImg/register_page.jpg)</kbd>  
   **需求說明**  
     1. 建立一個 Register 頁面，頁面有一個表單(form)，表單上有"**送出**"與"**清除**"按鈕。  
     2. 表單需包含以下欄位，**身份証字號**、**姓名**、**性別**、**手機號碼**，欄位的input類型需與畫面相同。  
@@ -178,8 +177,8 @@ npm start
     12. 在 Practice 頁面上的練習項目清單，加上 Register 連結，連結文字為"Register"，點擊後會轉至 Register 頁面。  
 
 ### **※項目 9. 呼叫 API 取得產品資料在畫面顯示並且可查看產品明細資料。** ###
-  ![ajax demo list](readmeImg/ajax_demo_list.jpg)  
-  ![ajax demo detail](readmeImg/ajax_demo_detail.jpg)  
+  <kbd>![ajax demo list](readmeImg/ajax_demo_list.jpg)  
+  ![ajax demo detail](readmeImg/ajax_demo_detail.jpg)</kbd>  
   **需求說明**  
     1. 建立一個 AjaxDemo 頁面，用來呈現呼叫 API 後取得的產品清單，每筆資料顯示欄位 **prodName**(品名)、**prodImg**(產品圖片)。  
     2. 點擊清單項目後，以該筆資料的 prodId(產品 id) 再呼叫 API 取得產品明細資料，使用"練習項目8"製作的 PopupModal 組件顯示明細資料，顯示欄位為 **prodId**(產品 id)、**prodName**(品名)、**prodImg**(產品圖片)、**amount**(售價)、**width**(寬)、**height**(高)、**weight**(重量)、**description**(說明)，PopupModal 要有"關閉"按鈕，點擊後可關閉。  
@@ -241,7 +240,7 @@ npm start
     ```  
 
 ### **※項目 10. 建立一個頁面，頁面上有個 input 與按鈕當按下按鈕後，要將 focus 移至 input 上。** ###
-  ![ref demo](readmeImg/ref_demo.jpg)  
+  <kbd>![ref demo](readmeImg/ref_demo.jpg)</kbd>  
   **需求說明**  
     1. 建立一個 RefDemo 頁面，頁面上有個 input 與按鈕。  
     2. 按下 Set Focus 按鈕後，要將 focus 移至 input 上。  
@@ -249,7 +248,7 @@ npm start
     4. 在 Practice 頁面上的練習項目清單，加上 RefDemo 連結，連結文字為"Ref Demo"，點擊後會轉至 RefDemo 頁面。  
 
 ### **※項目 11. 建立一個頁面，頁面上要有可以左右滑動、自動輪播圖片的區塊，並且資料由 API 取得。** ###
-  ![carousel demo](readmeImg/owl_carousel.gif)  
+  <kbd>![carousel demo](readmeImg/owl_carousel.gif)</kbd>  
   **需求說明**  
     1. 建立一個 CarouselDemo 頁面，頁面上要有左右滑動、自動輪播區塊，一次顯示 3 個圖片。  
     2. 使用 **Owl Carousel 2** 套件實現頁面上要有左右滑動、自動輪播區塊，一次顯示 3 個圖片的功能。  
@@ -285,7 +284,7 @@ npm start
     ```  
 
 ### **※項目 12. 建立一個計數器頁面，可透過 Practice 頁面上練習項目清單的 CounterWithState 連結開啟該頁。** ###
-  ![counter with state](readmeImg/counter_with_state.jpg)  
+  <kbd>![counter with state](readmeImg/counter_with_state.jpg)</kbd>  
   **需求說明**  
     1. 建立一個 CounterWithState 頁面，**使用 ?? 將計數值儲存在 state**。  
     2. 計數**初始值為 0** ，如果**離開頁面再回來，計數數字會與上一次離開頁面時的數字相同**。  
@@ -305,3 +304,4 @@ npm start
 * Sass - https://sass-lang.com
 * axios - https://github.com/axios/axios  
 * Owl Carousel 2 - https://github.com/OwlCarousel2/OwlCarousel2  
+* Angular 中文 - https://angular.tw/docs  
