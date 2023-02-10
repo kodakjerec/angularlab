@@ -12,6 +12,7 @@ import { SearchComponent } from './homeworks/search/search.component';
 import { FilterDemoComponent } from './homeworks/filterDemo/filterDemo.component';
 import { PopupModelComponent } from './homeworks/popup-model/popup-model.component';
 import { FormatMoneyPipe } from './homeworks/filterDemo/filterDemo.pipe.spec';
+import { ListDemoComponent } from './homeworks/list-demo/list-demo.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormatMoneyPipe } from './homeworks/filterDemo/filterDemo.pipe.spec';
     FilterDemoComponent,
     PopupModelComponent,
     FormatMoneyPipe,
+    ListDemoComponent,
   ],
   imports: [
     BrowserModule,

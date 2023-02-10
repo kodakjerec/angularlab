@@ -1,0 +1,17 @@
+<p>list-demo works!</p>
+<div>
+    回到 Home<br />
+    <button (click)="gotoHome()">Home</button>
+    <div>
+        <div style="display:flex" *ngIf="list.length>0">
+            <ul *ngFor="let item of list; let index=index">
+                <li (click)="clickItem(item, index)">{{item.name}}</li>
+            </ul>
+        </div>
+        <div>
+            <p>You click item</p>
+            <p>{{itemContent.name}}</p>
+            <p>{{itemContent.index}}</p>
+        </div>
+    </div>
+</div>

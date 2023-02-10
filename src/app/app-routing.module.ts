@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { PracticeComponent } from './homeworks/practice/practice.component';
 import { SearchComponent } from './homeworks/search/search.component';
+import { ListDemoComponent } from './homeworks/list-demo/list-demo.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'counter', component: CounterComponent },
   { path: 'search', component: SearchComponent },
   { path: 'filterDemo', component: FilterDemoComponent },
+  { path: 'listDemo', component: ListDemoComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 
