@@ -7,10 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
-import { CounterComponent } from './counter/counter.component';
-import { SearchComponent } from './search/search.component';
-import { FilterDemoComponent } from './filterDemo/filterDemo.component';
-import { PopupModelComponent } from './popup-model/popup-model.component';
+import { CounterComponent } from './homeworks/counter/counter.component';
+import { SearchComponent } from './homeworks/search/search.component';
+import { FilterDemoComponent } from './homeworks/filterDemo/filterDemo.component';
+import { PopupModelComponent } from './homeworks/popup-model/popup-model.component';
+import { FormatMoneyPipe } from './homeworks/filterDemo/filterDemo.pipe.spec';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,15 @@ import { PopupModelComponent } from './popup-model/popup-model.component';
     SearchComponent,
     FilterDemoComponent,
     PopupModelComponent,
+    FormatMoneyPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

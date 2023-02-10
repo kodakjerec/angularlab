@@ -122,7 +122,7 @@ npm start
     6. 在 Practice 頁面上的練習項目清單，加上 Search 連結，連結文字為"Search"，點擊後會轉至 Search 頁面。  
 
 ### **※項目 4. 建立一個能把數字轉為有千分位的字串且保留小數位數的 filter，並在頁面展示 filter 的功能。** ###
-  <kbd>![filter demo](readmeImg/filter_demo.jpg)</kbd>  
+  <kbd>![filter demo](readmeImg/filterDemo.jpg)</kbd>  
   **需求說明**  
     1. 新建一個 filter 功能，參照目前專案的構結檔案應放置在 /src/utils/filters 下，filter 名稱為"**commafy**"，作法可參考 filters 內的 demo.js。  
     2. 此 filter **可將數字轉為有千分位的字串且保留小數位數**，例如將 10000.00 轉為 10,000.00、1000 轉為 1,000。  
