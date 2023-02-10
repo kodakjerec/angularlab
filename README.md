@@ -150,8 +150,7 @@ npm start
     3. 將目前畫面上的選單替換成此組件，替換後頁面呈現要與原本頁面相同。  
 
 ### **※項目 7. 建立一個 popup modal component。** ###
-  <kbd>![popup modal compoment](readmeImg/popup_modal.jpg)  
-  ![popup modal compoment demo](readmeImg/popup_modal_demo.jpg)</kbd>  
+  <kbd>![popup modal compoment demo](readmeImg/popup_modal_demo.jpg)</kbd>  
   **需求說明**  
     1. 建立一個組件名稱為 **PopupModal**。  
     2. 組件必須要有 **title、isOpen 屬性**，title 用來提供標題文字。isOpen 用來控制 modal 的開關。  

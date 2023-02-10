@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface item {
   name: string;
@@ -11,6 +12,7 @@ interface item {
   styleUrls: ['./list-demo.component.scss'],
 })
 export class ListDemoComponent implements OnInit {
+  constructor(private router: Router, private route: ActivatedRoute) {}
   list: item[] = [];
   itemContent: item = {
     name: '',

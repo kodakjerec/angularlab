@@ -10,9 +10,11 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { CounterComponent } from './homeworks/counter/counter.component';
 import { SearchComponent } from './homeworks/search/search.component';
 import { FilterDemoComponent } from './homeworks/filterDemo/filterDemo.component';
-import { PopupModelComponent } from './homeworks/popup-model/popup-model.component';
 import { FormatMoneyPipe } from './homeworks/filterDemo/filterDemo.pipe.spec';
 import { ListDemoComponent } from './homeworks/list-demo/list-demo.component';
+import { MenuComponent } from './homeworks/menu/menu.component';
+import { PopupModalComponent } from './homeworks/popup-modal/popup-modal.component';
+import { ModalDemoComponent } from './homeworks/modal-demo/modal-demo.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,11 @@ import { ListDemoComponent } from './homeworks/list-demo/list-demo.component';
     CounterComponent,
     SearchComponent,
     FilterDemoComponent,
-    PopupModelComponent,
     FormatMoneyPipe,
     ListDemoComponent,
+    MenuComponent,
+    PopupModalComponent,
+    ModalDemoComponent,
   ],
   imports: [
     BrowserModule,
