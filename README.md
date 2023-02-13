@@ -154,17 +154,17 @@ npm start
   **需求說明**  
     1. 建立一個組件名稱為 **PopupModal**。  
     2. 組件必須要有 **title、isOpen 屬性**，title 用來提供標題文字。isOpen 用來控制 modal 的開關。  
-    3. 使用 **slot 方式**注入 modal 的**主要內容區塊**。  
+    3. 使用 **[] @Input () @Output 方式**注入 modal 的**主要內容區塊**。  
     4. 建立一個 ModalDemo 頁面，**展示此組件的功能是否符合需求**。  
     5. ModalDemo 頁面的路由名稱為"modalDemo"，網址路徑為"/modalDemo"。  
     6. 在 Practice 頁面上的練習項目清單，加上 ModalDemo 連結，連結文字為"Modal Demo"，點擊後會轉至 ModalDemo 頁面。  
 
 ### **※項目 8. 新增一個使用者註冊頁面，表單需做欄位檢核，並且有送出與清除功能。** ###
-  <kbd>![menu compoment](readmeImg/register_page.jpg)</kbd>  
+  <kbd>![menu compoment](readmeImg/signinForm.jpg)</kbd>  
   **需求說明**  
-    1. 建立一個 Register 頁面，頁面有一個表單(form)，表單上有"**送出**"與"**清除**"按鈕。  
+    1. 建立一個 SinginForm 頁面，頁面有一個表單(form)，表單上有"**送出**"與"**清除**"按鈕。  
     2. 表單需包含以下欄位，**身份証字號**、**姓名**、**性別**、**手機號碼**，欄位的input類型需與畫面相同。  
-    3. 使用 **VeeValidate** 套件實作欄位檢核。  
+    3. 使用 **FormGroup, FormControl** 實作欄位檢核。  
     4. "身份証字號"為必填欄位，資料長度必需為10，且只能填英、數字。  
     5. "姓名"為必填欄位，資料長度上限為30。  
     6. "性別"為必填欄位。  
@@ -172,8 +172,8 @@ npm start
     8. 未通過必填欄位檢核顯示錯誤訊息為"**此欄位為必填欄位。**"，其餘錯誤皆顯示"**輸入格式錯誤，請重新輸入。**"。  
     9. 按下**送出**時，若通過檢核以 window.alert 顯示使用者填寫的資料。若有任一欄位未通過檢核該欄位下方應顯示錯誤訊息，且不會有彈跳視窗顯示使用者填寫的資料。  
     10. 按下**清除**時，需清除表單內所有欄位的值與檢核未通過的錯誤訊息。  
-    11. Register 頁面路由名稱為"register"，網址路徑為"/register"。  
-    12. 在 Practice 頁面上的練習項目清單，加上 Register 連結，連結文字為"Register"，點擊後會轉至 Register 頁面。  
+    11. SinginForm 頁面路由名稱為"singinForm"，網址路徑為"/singinForm"。  
+    12. 在 Practice 頁面上的練習項目清單，加上 SinginForm 連結，連結文字為"SinginForm"，點擊後會轉至 SinginForm 頁面。  
 
 ### **※項目 9. 呼叫 API 取得產品資料在畫面顯示並且可查看產品明細資料。** ###
   <kbd>![ajax demo list](readmeImg/ajax_demo_list.jpg)  

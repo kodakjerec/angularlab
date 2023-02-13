@@ -1,0 +1,69 @@
+<p>signin-form works!</p>
+<button routerLink="/home">Home</button><br />
+
+<form [formGroup]="heroForm" class="form" #formDir="ngForm">
+    <div class="cross-validation"
+        [class.cross-validation-error]="heroForm.errors?.['identityRevealed'] && (heroForm.touched || heroForm.dirty)">
+        <div class="form-input">
+            <label>身分證字號</label>
+            <div class="input">
+                <input type="text" formControlName="id" maxlength="10">
+                <div *ngIf="id.invalid && (id.dirty || id.touched)" class="text-danger">
+                    <div *ngIf="id.errors?.['required']; else others">
+                        此欄位為必填欄位。
+                    </div>
+                </div>
+                <ng-template #others>
+                    輸入格式錯誤，請重新輸入。
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="form-input">
+        <label for="name">姓名</label>
+        <div class="input">
+            <input type="text" formControlName="name">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
+                <div *ngIf="name.errors?.['required']; else others">
+                    此欄位為必填欄位。
+                </div>
+                <ng-template #others>
+                    輸入格式錯誤，請重新輸入。
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="form-input">
+        <label>性別</label>
+        <div class="input">
+            <input type="radio" value="0" formControlName="gender">男
+            <input type="radio" value="1" formControlName="gender">女
+            <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="text-danger">
+                <div *ngIf="gender.errors?.['required']; else others">
+                    此欄位為必填欄位。
+                </div>
+                <ng-template #others>
+                    輸入格式錯誤，請重新輸入。
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="form-input">
+        <label>手機號碼</label>
+        <div class="input">
+            <input type="text" formControlName="cellphone" maxlength="10">
+            <div *ngIf="cellphone.invalid && (cellphone.dirty || cellphone.touched)" class="text-danger">
+                <div *ngIf="cellphone.errors?.['required']; else others">
+                    此欄位為必填欄位。
+                </div>
+                <ng-template #others>
+                    輸入格式錯誤，請重新輸入。
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="buttonGroup">
+        <button [disabled]="heroForm.invalid" (click)="submit()">送出</button>
+        <button (click)="formDir.resetForm({})">清除</button>
+    </div>
+</form>

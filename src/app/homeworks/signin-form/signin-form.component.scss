@@ -1,0 +1,27 @@
+.form {
+    border: 1px solid black;
+    width: 50vw;
+    height: 50vh;
+
+    .form-input{
+        display: flex;
+        label{
+        width:40%;
+        }
+        .input{
+            width:60%
+        }
+    }
+
+    .buttonGroup{
+        display: block;
+        button {
+            width: 50%;
+        }
+    }
+}
+
+.text-danger {
+    color: red;
+    font-size: 1vmin;
+}
