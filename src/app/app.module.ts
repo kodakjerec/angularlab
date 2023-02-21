@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { MenuComponent } from './homeworks/menu/menu.component';
 import { PopupModalComponent } from './homeworks/popup-modal/popup-modal.component';
 import { ModalDemoComponent } from './homeworks/modal-demo/modal-demo.component';
 import { SigninFormComponent } from './homeworks/signin-form/signin-form.component';
+import { AjaxDemoComponent } from './homeworks/ajax-demo/ajax-demo.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { SigninFormComponent } from './homeworks/signin-form/signin-form.compone
     PopupModalComponent,
     ModalDemoComponent,
     SigninFormComponent,
+    AjaxDemoComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { SigninFormComponent } from './homeworks/signin-form/signin-form.compone
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,13 @@
+<p>ajax-demo works!</p>
+<button routerLink="/home">Home</button><br />
+
+<ul *ngIf="list.length>0; else noData">
+    <li *ngFor="let item of list">
+        prodId:{{item.prodId}}<br />
+        prodName:{{item.prodName}}<br />
+        <img :src="item.prodImg">
+    </li>
+</ul>
+<ng-template #noData>
+    查無資料
+</ng-template>

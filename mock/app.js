@@ -31,7 +31,7 @@ app.use(bodyParser.json({ limit: 1024 * 1024 * 5, type: 'application/json' }))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(allowCrossDomain)
 app.use('/', home)
-app.use('/product', product)
+app.use('/product', product) // 注意註冊路徑
 
 const PORT = 9999
 app.listen(PORT, function () {
