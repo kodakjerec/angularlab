@@ -18,6 +18,7 @@ import { PopupModalComponent } from './homeworks/popup-modal/popup-modal.compone
 import { ModalDemoComponent } from './homeworks/modal-demo/modal-demo.component';
 import { SigninFormComponent } from './homeworks/signin-form/signin-form.component';
 import { AjaxDemoComponent } from './homeworks/ajax-demo/ajax-demo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -42,8 +43,10 @@ import { AjaxDemoComponent } from './homeworks/ajax-demo/ajax-demo.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [PopupModalComponent],
 })
 export class AppModule {}

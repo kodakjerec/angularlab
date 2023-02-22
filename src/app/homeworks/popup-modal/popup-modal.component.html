@@ -1,6 +1,9 @@
-<dialog [open]="isOpen">
-    <p>popup-modal works!</p>
-    <p>title: {{title}}</p>
-    <p>content: This is popup-modal</p>
-    <button (click)="close()">close</button>
-</dialog>
+<div>
+    <h2 mat-dialof-title>溫馨小提醒</h2>
+    <mat-dialog-content>
+        {{data.content}}
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button (click)="onClose()" color="warn">OK</button>
+    </mat-dialog-actions>
+</div>

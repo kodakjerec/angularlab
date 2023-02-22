@@ -1,17 +1,29 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-popup-modal',
   templateUrl: './popup-modal.component.html',
   styleUrls: ['./popup-modal.component.scss'],
 })
-export class PopupModalComponent {
-  @Input() title: string = '';
-  @Input() isOpen!: boolean;
-  @Output() isOpenChange = new EventEmitter<boolean>();
+export class PopupModalComponent implements OnInit {
+  isOpen = false;
 
-  close() {
-    this.isOpen = false;
-    this.isOpenChange.emit(this.isOpen);
+  constructor(
+    public dialogRef: MatDialogRef<PopupModalComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {}
+
+  ngOnInit() {}
+
+  onClose() {
+    this.dialogRef.close(); //關閉dialog function
   }
+}
+function ngOnInit() {
+  throw new Error('Function not implemented.');
 }

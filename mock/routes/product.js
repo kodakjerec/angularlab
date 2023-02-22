@@ -7,16 +7,18 @@ const range = require('lodash/range')
 const genDatas = (times = 1, fn) => map(range(times), (n) => fn(n))
 const chance = new Chance()
 
+
 router.post('/list', function (req, res) {
-  const rowCounter = chance.integer({ min: 1, max: 10 });
+  let imgSrcList = ["food1.jpg", "food2.jpg", "food3.jpg"];
+  const rowCounter = chance.integer({ min: 0, max: 10 });
   const data = {
-    isSuccess: chance.bool(),
+    isSuccess: rowCounter>0?true:false,
     message: '',
     data: genDatas(rowCounter, () => {
       return {
         prodId: chance.guid(),
         prodName: chance.name(),
-        prodImg: chance.avatar()
+        prodImg: 'assets/pics/'+imgSrcList[chance.integer({ min:0, max:2})]
       }
     })
   }

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PopupModalComponent } from '../popup-modal/popup-modal.component';
 
 @Component({
   selector: 'app-modal-demo',
@@ -7,9 +9,14 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./modal-demo.component.scss'],
 })
 export class ModalDemoComponent {
+  [x: string]: any;
   isOpen: boolean = false;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    public dialog: MatDialog
+  ) {}
 
   /**
    * @description go back to home
@@ -21,6 +28,13 @@ export class ModalDemoComponent {
   };
 
   showModal() {
+    const dialogRef = this.dialog.open(PopupModalComponent, {
+      width: '600px',
+      data: { content: '123' },
+    });
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log(result);
+    });
     this.isOpen = true;
   }
 

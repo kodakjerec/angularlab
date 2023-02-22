@@ -5,7 +5,7 @@
     <li *ngFor="let item of list">
         prodId:{{item.prodId}}<br />
         prodName:{{item.prodName}}<br />
-        <img :src="item.prodImg">
+        <img [src]="item.prodImg">
     </li>
 </ul>
 <ng-template #noData>

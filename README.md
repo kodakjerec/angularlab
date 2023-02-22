@@ -301,6 +301,5 @@ npm start
 * ECMAScript 6 入門 - http://es6.ruanyifeng.com
 * JSDoc 說明 - https://docs.microsoft.com/zh-tw/visualstudio/ide/create-jsdoc-comments-for-javascript-intellisense
 * Sass - https://sass-lang.com
-* axios - https://github.com/axios/axios  
-* Owl Carousel 2 - https://github.com/OwlCarousel2/OwlCarousel2  
+* axios - https://github.com/axios/axios
 * Angular 中文 - https://angular.tw/docs  
