@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+// Material
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
 
+// Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,9 +28,11 @@ import { ModalDemoComponent } from './homeworks/modal-demo/modal-demo.component'
 import { SigninFormComponent } from './homeworks/signin-form/signin-form.component';
 import { AjaxDemoComponent } from './homeworks/ajax-demo/ajax-demo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PracticeComponent } from './homeworks/practice/practice.component';
 
 @NgModule({
   declarations: [
+    PracticeComponent,
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
@@ -43,7 +54,15 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    // Material
     MatDialogModule,
+    MatMenuModule,
+    MatListModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent],

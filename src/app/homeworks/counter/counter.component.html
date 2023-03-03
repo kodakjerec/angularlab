@@ -1,8 +1,7 @@
-<p>counter works!</p>
-<button routerLink="/home">Home</button><br />
+<mat-label>counter works!</mat-label>
 
 <div class="form-control">
-    <input [value]="count" /><br />
-    <button (click)="addCount()">ADD</button>
-    <button (click)="delCount()">DEL</button>
+    <input matInput [value]="count" /><br />
+    <button mat-raised-button (click)="addCount()">ADD</button>
+    <button mat-raised-button (click)="delCount()">DEL</button>
 </div>

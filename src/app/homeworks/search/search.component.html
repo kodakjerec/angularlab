@@ -1,8 +1,7 @@
 <p>search works!</p>
-<button routerLink="/home">Home</button><br />
 
 <div class="form-control">
-    <input type="text" [(ngModel)]="searchText" (input)="search()" />
+    <input matInput type="text" [(ngModel)]="searchText" (input)="search()" />
 </div>
 <div>
     <table *ngIf="listFiltered.length>0; else noResult">

@@ -1,69 +1,62 @@
 <p>signin-form works!</p>
-<button routerLink="/home">Home</button><br />
 
 <form [formGroup]="heroForm" class="form" #formDir="ngForm">
     <div class="cross-validation"
         [class.cross-validation-error]="heroForm.errors?.['identityRevealed'] && (heroForm.touched || heroForm.dirty)">
-        <div class="form-input">
-            <label>身分證字號</label>
-            <div class="input">
-                <input type="text" formControlName="id" maxlength="10">
-                <div *ngIf="id.invalid && (id.dirty || id.touched)" class="text-danger">
-                    <div *ngIf="id.errors?.['required']; else others">
-                        此欄位為必填欄位。
-                    </div>
-                </div>
-                <ng-template #others>
-                    輸入格式錯誤，請重新輸入。
-                </ng-template>
-            </div>
-        </div>
-    </div>
-    <div class="form-input">
-        <label for="name">姓名</label>
-        <div class="input">
-            <input type="text" formControlName="name">
-            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
-                <div *ngIf="name.errors?.['required']; else others">
+        <mat-form-field>
+            <mat-label for="id">身分證字號</mat-label>
+            <input matInput type="text" formControlName="id" name="id" maxlength="10">
+            <mat-error *ngIf="id.invalid && (id.dirty || id.touched)" class="text-danger">
+                <span *ngIf="id.errors?.['required']; else others">
                     此欄位為必填欄位。
-                </div>
-                <ng-template #others>
-                    輸入格式錯誤，請重新輸入。
-                </ng-template>
-            </div>
-        </div>
+                </span>
+            </mat-error>
+            <ng-template #others>
+                輸入格式錯誤，請重新輸入。
+            </ng-template>
+        </mat-form-field>
     </div>
-    <div class="form-input">
-        <label>性別</label>
-        <div class="input">
-            <input type="radio" value="0" formControlName="gender">男
-            <input type="radio" value="1" formControlName="gender">女
-            <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="text-danger">
-                <div *ngIf="gender.errors?.['required']; else others">
+    <mat-form-field>
+        <mat-label for="name">姓名</mat-label>
+        <input matInput type="text" formControlName="name" name="name">
+        <mat-error *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
+            <span *ngIf="name.errors?.['required']; else others">
+                此欄位為必填欄位。
+            </span>
+            <ng-template #others>
+                輸入格式錯誤，請重新輸入。
+            </ng-template>
+        </mat-error>
+    </mat-form-field>
+    <div>
+        <mat-radio-group class="input" formControlName="gender">
+            <mat-label>性別</mat-label>
+            <mat-radio-button value="0">男</mat-radio-button>
+            <mat-radio-button value="1">女</mat-radio-button>
+            <mat-error *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="text-danger">
+                <mat-error *ngIf="gender.errors?.['required']; else others">
                     此欄位為必填欄位。
-                </div>
+                </mat-error>
                 <ng-template #others>
                     輸入格式錯誤，請重新輸入。
                 </ng-template>
-            </div>
-        </div>
+            </mat-error>
+        </mat-radio-group>
     </div>
-    <div class="form-input">
-        <label>手機號碼</label>
-        <div class="input">
-            <input type="text" formControlName="cellphone" maxlength="10">
-            <div *ngIf="cellphone.invalid && (cellphone.dirty || cellphone.touched)" class="text-danger">
-                <div *ngIf="cellphone.errors?.['required']; else others">
-                    此欄位為必填欄位。
-                </div>
-                <ng-template #others>
-                    輸入格式錯誤，請重新輸入。
-                </ng-template>
-            </div>
-        </div>
-    </div>
+    <mat-form-field>
+        <mat-label for="cellphone">手機號碼</mat-label>
+        <input matInput type="text" formControlName="cellphone" name="cellphone" maxlength="10">
+        <mat-error *ngIf="cellphone.invalid && (cellphone.dirty || cellphone.touched)" class="text-danger">
+            <mat-error *ngIf="cellphone.errors?.['required']; else others">
+                此欄位為必填欄位。
+            </mat-error>
+            <ng-template #others>
+                輸入格式錯誤，請重新輸入。
+            </ng-template>
+        </mat-error>
+    </mat-form-field>
     <div class="buttonGroup">
-        <button [disabled]="heroForm.invalid" (click)="submit()">送出</button>
-        <button (click)="formDir.resetForm({})">清除</button>
+        <button mat-raised-button [disabled]="heroForm.invalid" (click)="submit()">送出</button>
+        <button mat-raised-button (click)="formDir.resetForm({})">清除</button>
     </div>
 </form>

@@ -1,13 +1,9 @@
 <p>list-demo works!</p>
 <div>
-    回到 Home<br />
-    <button (click)="gotoHome()">Home</button>
     <div>
-        <div style="display:flex" *ngIf="list.length>0">
-            <ul *ngFor="let item of list; let index=index">
-                <li (click)="clickItem(item, index)">{{item.name}}</li>
-            </ul>
-        </div>
+        <mat-list *ngIf="list.length>0" role="list">
+            <mat-list-item *ngFor="let item of list; let index=index" (click)="clickItem(item, index)">{{item.name}}</mat-list-item>
+        </mat-list>
         <div>
             <p>You click item</p>
             <p>{{itemContent.name}}</p>
