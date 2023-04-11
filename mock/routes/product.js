@@ -9,7 +9,7 @@ const chance = new Chance()
 
 
 router.post('/list', function (req, res) {
-  let imgSrcList = ["food1.jpg", "food2.jpg", "food3.jpg"];
+  let imgSrcList = ["food1.jpg", "food2.jpg", "food3.jpg", "food4.jpg", "food5.jpg", "food6.jpg", "food7.jpg", "food8.jpg", "food9.jpg", "food10.jpg"];
   const rowCounter = chance.integer({ min: 0, max: 10 });
   const data = {
     isSuccess: rowCounter>0?true:false,

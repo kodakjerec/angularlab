@@ -36,6 +36,7 @@ export class SliderComponent implements OnInit {
     }
 
     list: Array<any> = [];
+    loading:boolean = false;
 
     ngOnInit(): void {
       this.init();
@@ -48,5 +49,6 @@ export class SliderComponent implements OnInit {
       } else {
         this.list = [];
       }
+      this.loading = true;
     }
 }

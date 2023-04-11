@@ -1,5 +1,5 @@
 <div>
-    <owl-carousel-o [options]="customOptions">
+    <owl-carousel-o [options]="customOptions" *ngIf="loading">
         <ng-container *ngFor="let slide of list">
             <ng-template carouselSlide [id]="slide.prodId">
                 <img [src]="slide.prodImg">
