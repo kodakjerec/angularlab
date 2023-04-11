@@ -18,10 +18,10 @@ export class ConfigService {
     );
   }
 
-  post(path: string, params?: HttpParams): any {
+  post(path: string, body?: any): any {
     return lastValueFrom(
       this.http
-        .post(path, { params: params })
+        .post(path, body)
         .pipe(catchError(this.handleError))
     );
   }

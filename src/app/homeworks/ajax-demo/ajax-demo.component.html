@@ -1,7 +1,7 @@
 <p>ajax-demo works!</p>
 
 <ul *ngIf="list.length>0; else noData">
-    <li *ngFor="let item of list">
+    <li *ngFor="let item of list" (click)="showDetail(item)">
         prodId:{{item.prodId}}<br />
         prodName:{{item.prodName}}<br />
         <img [src]="item.prodImg">

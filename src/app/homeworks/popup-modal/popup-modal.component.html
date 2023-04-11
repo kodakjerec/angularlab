@@ -1,8 +1,31 @@
 <div>
     <h2 mat-dialof-title>溫馨小提醒</h2>
-    <mat-dialog-content>
-        {{data.content}}
+    <mat-dialog-content *ngIf="ajaxDemo; else showContent">
+        <mat-form-field class="example-full-width">
+            <mat-label>產品 id</mat-label>
+            <input matInput [ngModel]="itemContent.prodId">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>品名</mat-label>
+            <input matInput [value]="itemContent.prodName">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>產品圖片</mat-label>
+            <input matInput [value]="itemContent.prodImg">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>售價</mat-label>
+            <input matInput [value]="itemContent.amount">
+        </mat-form-field>
+        <mat-label> 寬 * 高 重量 說明</mat-label><br>
+        <mat-label> {{itemContent.width}} *
+            {{itemContent.height}} {{itemContent.weight}} {{itemContent.description}}</mat-label>
     </mat-dialog-content>
+    <ng-template #showContent>
+        <mat-dialog-content>
+            {{data.content}}
+        </mat-dialog-content>
+    </ng-template>
     <mat-dialog-actions>
         <button mat-raised-button mat-raised-button (click)="onClose()" color="warn">OK</button>
     </mat-dialog-actions>

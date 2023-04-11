@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfigService } from 'src/app/services/http/config.service';
 // Material
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
@@ -64,7 +65,8 @@ import { PracticeComponent } from './homeworks/practice/practice.component';
     MatIconModule,
     MatRadioModule
   ],
-  providers: [],
+  providers: [
+    ConfigService],
   bootstrap: [AppComponent],
   entryComponents: [PopupModalComponent],
 })

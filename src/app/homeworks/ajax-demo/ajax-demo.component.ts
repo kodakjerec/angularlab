@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ConfigService } from 'src/app/services/http/config.service';
+import { PopupModalComponent } from '../popup-modal/popup-modal.component';
 
 @Component({
   selector: 'app-ajax-demo',
@@ -8,7 +10,8 @@ import { ConfigService } from 'src/app/services/http/config.service';
   providers: [ConfigService],
 })
 export class AjaxDemoComponent implements OnInit {
-  constructor(private http: ConfigService) {}
+  constructor(private http: ConfigService,
+    public dialog: MatDialog) {}
 
   list: Array<any> = [];
 
@@ -23,5 +26,15 @@ export class AjaxDemoComponent implements OnInit {
     } else {
       this.list = [];
     }
+  }
+
+  showDetail(item:any) {
+    const dialogRef = this.dialog.open(PopupModalComponent, {
+      width: '600px',
+      data: { content: item, ajaxDemo: true },
+    });
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log(result);
+    });
   }
 }
