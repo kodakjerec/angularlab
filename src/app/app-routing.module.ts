@@ -11,6 +11,7 @@ import { ModalDemoComponent } from './homeworks/modal-demo/modal-demo.component'
 import { SigninFormComponent } from './homeworks/signin-form/signin-form.component';
 import { AjaxDemoComponent } from './homeworks/ajax-demo/ajax-demo.component';
 import { RefDemoComponent } from './homeworks/ref-demo/ref-demo.component';
+import { SliderComponent } from './homeworks/slider/slider.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'signinForm', component: SigninFormComponent },
   { path: 'ajaxDemo', component: AjaxDemoComponent },
   { path: 'refDemo', component: RefDemoComponent },
+  { path: 'slider', component: SliderComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 

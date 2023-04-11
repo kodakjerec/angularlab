@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfigService } from 'src/app/services/http/config.service';
+
 // Material
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
@@ -10,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 // Components
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +33,7 @@ import { AjaxDemoComponent } from './homeworks/ajax-demo/ajax-demo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PracticeComponent } from './homeworks/practice/practice.component';
 import { RefDemoComponent } from './homeworks/ref-demo/ref-demo.component';
+import { SliderComponent } from './homeworks/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ import { RefDemoComponent } from './homeworks/ref-demo/ref-demo.component';
     ModalDemoComponent,
     SigninFormComponent,
     AjaxDemoComponent,
-    RefDemoComponent
+    RefDemoComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -65,11 +69,12 @@ import { RefDemoComponent } from './homeworks/ref-demo/ref-demo.component';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    CarouselModule
   ],
   providers: [
     ConfigService],
   bootstrap: [AppComponent],
-  entryComponents: [PopupModalComponent],
+  entryComponents: [PopupModalComponent]
 })
 export class AppModule {}

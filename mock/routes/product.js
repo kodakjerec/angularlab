@@ -16,7 +16,7 @@ router.post('/list', function (req, res) {
     message: '',
     data: genDatas(rowCounter, () => {
       return {
-        prodId: chance.guid(),
+        prodId: chance.name(),
         prodName: chance.name(),
         prodImg: 'assets/pics/'+imgSrcList[chance.integer({ min:0, max:2})]
       }

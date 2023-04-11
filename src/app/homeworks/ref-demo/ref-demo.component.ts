@@ -1,5 +1,4 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-ref-demo',
