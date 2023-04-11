@@ -30,6 +30,7 @@ import { SigninFormComponent } from './homeworks/signin-form/signin-form.compone
 import { AjaxDemoComponent } from './homeworks/ajax-demo/ajax-demo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PracticeComponent } from './homeworks/practice/practice.component';
+import { RefDemoComponent } from './homeworks/ref-demo/ref-demo.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PracticeComponent } from './homeworks/practice/practice.component';
     ModalDemoComponent,
     SigninFormComponent,
     AjaxDemoComponent,
+    RefDemoComponent
   ],
   imports: [
     BrowserModule,
